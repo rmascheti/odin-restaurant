@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <!-- <header>
+import pizzaImage from './AIPizzeria2.jpeg';
+function renderInitial(){
+
+    document.body.innerHTML = `<header>
         <h1>Napoli Pizzeria</h1>
         <div class="navbuttons">
             <nav><button>Home</button></nav>
@@ -24,7 +18,11 @@
                 <p>or come and meet us!</p>
             </div>
         </div>
-        <div class="right">Imagem</div>
-    </div> -->
-</body>
-</html>
+        <div class="right"></div>
+    </div>`
+    const image = document.createElement('img');
+    image.src = pizzaImage;
+    document.querySelector('.right').appendChild(image);
+}
+
+export default renderInitial;
